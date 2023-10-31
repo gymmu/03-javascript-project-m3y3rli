@@ -4,12 +4,13 @@ export function aufgabe01(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+
+    //falls es ein kleines "e" ist, soll es nicht angehängt werden
     if (currentElement === "e") {
-      result.push("")
-    } 
+      //result.push("")
+    } //falls es ein grosses "E" ist, soll es nicht angehängt werden
     else if (currentElement === "E") {
-      result.push("")
+      //result.push("")
     }
       else {
       result.push(currentElement)
