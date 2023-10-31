@@ -24,7 +24,7 @@ export function aufgabe02 (args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
+  //falls es einen kleinen Buchstaben beinhaltet, soll es gross an die Liste angehängt werden
   }
   return result.join("")
 }
