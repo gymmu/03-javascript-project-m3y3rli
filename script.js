@@ -7,7 +7,11 @@ export function aufgabe01(args) {
     
     if (currentElement === "e") {
       result.push("")
-    } else {
+    } 
+    else if (currentElement === "E") {
+      result.push("")
+    }
+      else {
       result.push(currentElement)
     }
   }
