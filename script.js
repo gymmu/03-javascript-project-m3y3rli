@@ -53,8 +53,7 @@ export function aufgabe03 (args) {
 }
 
 export function aufgabe04 (args) {
-  const input = args.split(" ")
-  //Das Eingegebene wird an den Leerzeichen getrennt
+  const input = args
   const result = []
   print(input)
 
@@ -63,6 +62,18 @@ export function aufgabe04 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
-  }
-  return input.length
+if ("+,-.#".indexOf(currentElement) >= 0) {
+//sortiert alle angegebenen Sonderzeichen aus aus
+}  else{
+  result.push(currentElement)
+}
+}
+
+const clearedString = result.join("")
+//sagt, dass die Buchstabenelemente zusammengehören
+const tmp = clearedString.split(" ")
+//sagt, dass die clearedString (gesäuberte Liste)mdurch Leerzeichen getrennt werden soll
+print(tmp)
+
+return tmp.length
 }
