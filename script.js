@@ -46,7 +46,7 @@ export function aufgabe03 (args) {
      }
     else if (currentElement === "E") {
       //zähle dieses E
-      
+      countE++
     }
   }
   return countE
