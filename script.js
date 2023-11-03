@@ -51,3 +51,13 @@ export function aufgabe03 (args) {
   }
   return countE
 }
+
+export function aufgabe (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+  return result.join("")
+}
