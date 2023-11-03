@@ -53,11 +53,16 @@ export function aufgabe03 (args) {
 }
 
 export function aufgabe04 (args) {
-  const input = args
+  const input = args.split(" ")
+  //Das Eingegebene wird an den Leerzeichen getrennt
   const result = []
+  print(input)
+
+  let count = 0
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
   }
-  return result.join("")
+  return input.length
 }
