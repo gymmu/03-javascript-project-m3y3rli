@@ -87,13 +87,13 @@ export function aufgabe05 (args) {
     const currentElement = input[i]
    
     if (currentElement === " ") {
-
+      //ignoriert alle Leerzeichen
     } else if (currentElement === ".") {
-
+      //ignoriert alle Punkte
     } else if (currentElement.toUpperCase() === currentElement) {
-      return true
+      return true //wenn die Buchstaben des Eingegebenen mit der grossgeschriebenen Version übereinstimmen, dann soll er true zurückgeben
     }
 
   }
-  return false
+  return false //wenn das Eingegebene diese Funktion nicht erfüllt, dann soll er false zurückgeben
   }
