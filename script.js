@@ -97,3 +97,18 @@ export function aufgabe05 (args) {
   }
   return false //wenn das Eingegebene diese Funktion nicht erfüllt, dann soll er false zurückgeben
   }
+ 
+
+export function aufgabe09 (args) {
+  const input = args
+
+ let len = 0
+
+  for (let i = 0; i < input.length; i++) {
+    len++ //zähle die Buchstaben von der variable len
+  }
+  if (len === 6){
+  return true //wenn die variable len genau 6 ist dann soll er true zurückgeben
+}
+  return false //sonst false
+  }
