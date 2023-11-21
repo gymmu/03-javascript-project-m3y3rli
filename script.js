@@ -144,13 +144,13 @@ if (input.length > 1) {
   export function aufgabe13 (args) {
     const input = args
 
-    for (let i = input.length -1; i >=0; i--) {
+    for (let i = input.length -1; i >=0; i--){
       const currentElement = input[i]
-      
+      //i haben wir umgekehrt, so dass er von hinten anfangt zu zählen
      if (currentElement === "e") {
         return i 
-      
+      //wenn ein e enthalten ist dann soll er den gespeicherten Wert von i zurückgeben
       }
     }
-    return -1
+    return -1 //wenn er diese Funktion erfüllt dann soll er -1 zurückgeben, also wenn kein e enthalten ist
   }
