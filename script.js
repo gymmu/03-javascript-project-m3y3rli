@@ -93,7 +93,6 @@ export function aufgabe05 (args) {
     } else if (currentElement.toUpperCase() === currentElement) {
       return true //wenn die Buchstaben des Eingegebenen mit der grossgeschriebenen Version übereinstimmen, dann soll er true zurückgeben
     }
-
   }
   return false //wenn das Eingegebene diese Funktion nicht erfüllt, dann soll er false zurückgeben
   }
@@ -111,4 +110,47 @@ export function aufgabe09 (args) {
   return true //wenn die variable len genau 6 ist dann soll er true zurückgeben
 }
   return false //sonst false
+  }
+
+  export function aufgabe11 (args) {
+    const input = args
+    const result = []
+    
+if (input.length > 1) {
+  return null //function guard 
+}
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+      return currentElement.charCodeAt(0)
+    } 
+    return null
+  }
+
+  export function aufgabe12 (args) {
+    const input = args
+    const result = []
+     for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+     
+      if(currentElement === "e"){
+        return i 
+      }
+     }
+    return -1
+  }
+
+  export function aufgabe13 (args) {
+    const input = args
+
+    for (let i = input.length -1; i >=0; i--) {
+      const currentElement = input[i]
+      
+     if (currentElement === "e") {
+        return i 
+      
+      }
+    }
+    return -1
   }
