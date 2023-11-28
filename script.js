@@ -151,8 +151,7 @@ if (input.length > 1) {
     return null
   }
 
-  export function aufgabe12 (args) {
-    const input = args
+  export function aufgabe12 (args) {    const input = args
     const result = []
      for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
@@ -176,4 +175,14 @@ if (input.length > 1) {
       }
     }
     return -1 //wenn er diese Funktion erfüllt dann soll er -1 zurückgeben, also wenn kein e enthalten ist
+  }
+
+  export function aufgabe14 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    }
+    return result.join("")
   }
