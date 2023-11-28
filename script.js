@@ -123,11 +123,11 @@ export function aufgabe09 (args) {
       const ascii = currentElement.charCodeAt(0)
 
       if (48 <= ascii && ascii <= 57) {
-
+        //sind alle Zahlen von 0 bis 9 
       } else if (65 <= ascii && ascii <= 70) {
-
+        //sind alle grossen Buchstaben von A bis F 
       } else if (97 <= ascii && ascii <= 102){
-
+        //sind alle kleinen Buchstaben von a bis f
       } else {
         return false
       }
