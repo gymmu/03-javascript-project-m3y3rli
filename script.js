@@ -93,7 +93,87 @@ export function aufgabe05 (args) {
     } else if (currentElement.toUpperCase() === currentElement) {
       return true //wenn die Buchstaben des Eingegebenen mit der grossgeschriebenen Version übereinstimmen, dann soll er true zurückgeben
     }
-
   }
   return false //wenn das Eingegebene diese Funktion nicht erfüllt, dann soll er false zurückgeben
+  }
+ 
+
+export function aufgabe09 (args) {
+  const input = args
+
+ let len = 0
+
+  for (let i = 0; i < input.length; i++) {
+    len++ //zähle die Buchstaben von der variable len
+  }
+  if (len === 6){
+  return true //wenn die variable len genau 6 ist dann soll er true zurückgeben
+}
+  return false //sonst false
+  }
+
+  export function aufgabe10 (args) {
+    const input = args
+    
+    if (input.length !== 7) return false
+    if (input[0] !== "#" ) return false
+
+    for (let i = 1; i < input.length; i++) {
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt(0)
+
+      if (48 <= ascii && ascii <= 57) {
+        //sind alle Zahlen von 0 bis 9 
+      } else if (65 <= ascii && ascii <= 70) {
+        //sind alle grossen Buchstaben von A bis F 
+      } else if (97 <= ascii && ascii <= 102){
+        //sind alle kleinen Buchstaben von a bis f
+      } else {
+        return false
+      }
+    }
+    return true
+  }
+
+  export function aufgabe11 (args) {
+    const input = args
+    const result = []
+    
+if (input.length > 1) {
+  return null //function guard 
+}
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+      return currentElement.charCodeAt(0)
+    } 
+    return null
+  }
+
+  export function aufgabe12 (args) {
+    const input = args
+    const result = []
+     for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+     
+      if(currentElement === "e"){
+        return i 
+      }
+     }
+    return -1
+  }
+
+  export function aufgabe13 (args) {
+    const input = args
+
+    for (let i = input.length -1; i >=0; i--){
+      const currentElement = input[i]
+      //i haben wir umgekehrt, so dass er von hinten anfangt zu zählen
+     if (currentElement === "e") {
+        return i 
+      //wenn ein e enthalten ist dann soll er den gespeicherten Wert von i zurückgeben
+      }
+    }
+    return -1 //wenn er diese Funktion erfüllt dann soll er -1 zurückgeben, also wenn kein e enthalten ist
   }
