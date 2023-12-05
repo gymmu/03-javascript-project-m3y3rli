@@ -180,9 +180,16 @@ if (input.length > 1) {
   export function aufgabe14 (args) {
     const input = args
     const result = []
+
+    let count3E = 0
+
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      
-    }
-    return result.join("")
+      if (currentElement === "e"){
+        return 2
+      } else if (currentElement === "E"){
+
+      }
+    return -1
+  }
   }
