@@ -181,8 +181,6 @@ if (input.length > 1) {
     const input = args
     const result = []
 
-    let count3E = 0
-
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       if (currentElement === "e"){
