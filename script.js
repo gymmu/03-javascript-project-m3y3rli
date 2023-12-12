@@ -201,3 +201,14 @@ if (input.length > 1) {
     }
     return result.join("")
   }
+
+  export function aufgabe24 (args) {
+    const input = args
+    const result = []
+    
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    }
+    return result.join("")
+  }
