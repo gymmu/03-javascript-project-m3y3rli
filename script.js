@@ -206,6 +206,8 @@ if (input.length > 1) {
     const input = args
     const result = []
 
+    if (input.length === 1) return input //function guard
+
     const firstElement = input[0]
     const lastElement = input[ input.length - 1 ]
 
