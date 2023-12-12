@@ -205,10 +205,13 @@ if (input.length > 1) {
   export function aufgabe24 (args) {
     const input = args
     const result = []
+
+    const firstElement = input[0]
+    const lastElement = input[ input.length - 1 ]
     
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      
+      result.push(currentElement)
     }
     return result.join("")
   }
