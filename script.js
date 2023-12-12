@@ -191,3 +191,13 @@ if (input.length > 1) {
     return -1
   }
   }
+
+  export function aufgabe21 (args) {
+    const input = args
+    const result = []
+    
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+    }
+    return result.join("")
+  }
