@@ -208,10 +208,13 @@ if (input.length > 1) {
 
     const firstElement = input[0]
     const lastElement = input[ input.length - 1 ]
-    
-    for (let i = 0; i < input.length; i++) {
+
+    result.push(lastElement)
+    for (let i = 1; i < input.length - 1; i++) {
       const currentElement = input[i]
       result.push(currentElement)
     }
+    result.push(firstElement)
+
     return result.join("")
   }
