@@ -141,6 +141,19 @@ export function aufgabe05 (args) {
     return false //wenn nicht dann false
    }
 
+   export function aufgabe08(args) {
+    const input = args        
+    const result = []                    
+    for (let i = 0; i < input.length; i++) {      
+      const currentElement = input[i]        
+      if (currentElement === "e") {                                                        
+      } else {                                                
+        result.push(currentElement)              
+      }
+    }
+    return result.join("")                                        
+   }
+
 export function aufgabe09 (args) {
   const input = args
 
