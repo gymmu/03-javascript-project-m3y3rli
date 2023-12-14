@@ -194,13 +194,29 @@ if (input.length > 1) {
 
   export function aufgabe18 (args) {
     const input = args
-    const result = []
+    const inputName = []
+    const inputAge = []
+    let readText = true
+
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      
+       if (currentElement === " " && readText !== false) {
+        readText = false
+      } else {
+        if (readText === true) {
+          inputName.push(currentElement)
+        }
+        else if (readText === false) {
+          inputAge.push(currentElement)
+        }
     }
-    return result.join("")
   }
+  if (inputName.join("") !== "" && inputAge.join("") !== "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") !== "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") !== "" && inputAge.join("") == "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") == "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
+ }
+  
 
   export function aufgabe21 (args) {
     const input = args
