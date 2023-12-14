@@ -149,7 +149,7 @@ export function aufgabe05 (args) {
       if (currentElement === "e") {  
         result.push(3) //wenn ein kleines e vorkommt soll es mit 3 ersetzt werden                                                     
       } else {                                                
-        result.push(currentElement)  //wenn keines vorkommt einfach das currentElement zurückgebenS            
+        result.push(currentElement)  //sonst einfach das currentElement zurückgeben         
       }
     }
     return result.join("")                                        
