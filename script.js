@@ -55,25 +55,25 @@ export function aufgabe03 (args) {
 export function aufgabe04 (args) {
   const input = args
   const result = []
-  const cleanText = []
-
+  const cleanText = [] //lösch alle Sonderzeichen ausser Leerzeichen
     for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const ascii = currentElement.charCodeAt(0)
+    const ascii = currentElement.charCodeAt(0) //wenn kein Sonderzeichen, dann soll er angehängt werden
     if (32 === ascii) {
       cleanText.push(currentElement)
-    } else if (65 <= ascii && ascii <= 90) {
-      cleanText.push(currentElement)
+    } else if (65 <= ascii && ascii <= 90) { 
+      cleanText.push(currentElement) //sind alle Grossbuchstaben
+      cleanText.push(currentElement) 
     } else if (97 <= ascii && ascii <= 122) {
-      cleanText.push(currentElement)
-    }
-  }
+      cleanText.push(currentElement)//sind alle Kleinbuchstaben
+    } 
+  } 
   const tmp = cleanText.join("")
   const tmpText = []
   for (let i = 0; i < tmp.length; i++) {
     const currentElement = tmp[i]
     const nextElement = tmp[i + 1]
-    if (currentElement === " " && nextElement === " ") {
+    if (currentElement === " " && nextElement === " "){ //ignoriert mehrere Leerzeichen hintereinander  
     } else {
       tmpText.push(currentElement)
     }
