@@ -55,29 +55,41 @@ export function aufgabe03 (args) {
 export function aufgabe04 (args) {
   const input = args
   const result = []
-  print(input)
+  const cleanText = []
 
-  let count = 0
-
-  for (let i = 0; i < input.length; i++) {
+    for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
-if ("+,-.#%&/()=?£}{$¦@¬|¢´!<>°§;':_~^*][¨".indexOf(currentElement) >= 0) {
-//sortiert alle angegebenen Sonderzeichen aus aus
-}  else{
-  result.push(currentElement)
-}
-}
-
-const clearedString = result.join("")
-//sagt, dass die Buchstabenelemente zusammengehören
-const tmp = clearedString.split(" ")
-//sagt, dass die clearedString (gesäuberte Liste)mdurch Leerzeichen getrennt werden soll
-print(tmp)
-
-return tmp.length
-}
-
+    const ascii = currentElement.charCodeAt(0)
+    if (32 === ascii) {
+      cleanText.push(currentElement)
+    } else if (65 <= ascii && ascii <= 90) {
+      cleanText.push(currentElement)
+    } else if (97 <= ascii && ascii <= 122) {
+      cleanText.push(currentElement)
+    }
+  }
+  const tmp = cleanText.join("")
+  const tmpText = []
+  for (let i = 0; i < tmp.length; i++) {
+    const currentElement = tmp[i]
+    const nextElement = tmp[i + 1]
+    if (currentElement === " " && nextElement === " ") {
+    } else {
+      tmpText.push(currentElement)
+    }
+  }
+ 
+ const clean = tmpText.join("")
+ 
+  let words = 0
+  for (let i = 0; i < clean.length; i++) {
+    const currentElement = clean[i]
+    if (currentElement === " ") {
+      words++
+    }
+  }
+  return words + 1
+ }
 
 export function aufgabe05 (args) {
   const input = args
