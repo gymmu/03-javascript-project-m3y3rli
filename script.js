@@ -117,13 +117,16 @@ export function aufgabe05 (args) {
       const ascii = currentElement.charCodeAt(0)
       if (ascii >= 48 && ascii <= 57) {
       } else if (ascii >= 65 && ascii <= 90) {
+        //überprüft ob es ein Grossbuchstabe ist
       } else if (ascii >= 97 && ascii <= 122) {
+        //überprüft ob es ein Kleinbuchstabe ist
       } else if (ascii === 32) {
+        //überprüft ob es ein Leerzeichen ist
       } else {
-        return true
+        return true //wenn es ein Sonderzeichen ist also kein der obrigen Test erfüllt, dann soll er true zurückgeben
       }
     }
-    return false
+    return false //alle Test nicht erfüllt, d. h. es ist leer also kein TExt
    }
 
 export function aufgabe09 (args) {
