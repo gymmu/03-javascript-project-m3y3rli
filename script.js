@@ -329,10 +329,10 @@ if (input.length > 1) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
-  }
+    if(currentElement == "." && input[i+1] !== " ") return false}
   return result.join("")
  }
+ 
 
   export function aufgabe21 (args) {
     const input = args
