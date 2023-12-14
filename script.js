@@ -146,9 +146,10 @@ export function aufgabe05 (args) {
     const result = []                    
     for (let i = 0; i < input.length; i++) {      
       const currentElement = input[i]        
-      if (currentElement === "e") {                                                        
+      if (currentElement === "e") {  
+        result.push(3) //wenn ein kleines e vorkommt soll es mit 3 ersetzt werden                                                     
       } else {                                                
-        result.push(currentElement)              
+        result.push(currentElement)  //wenn keines vorkommt einfach das currentElement zurückgebenS            
       }
     }
     return result.join("")                                        
