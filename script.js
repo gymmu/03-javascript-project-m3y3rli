@@ -135,10 +135,10 @@ export function aufgabe05 (args) {
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       if (currentElement === "u" && input[i+1] === "n" && input[i+2] === "d") {
-        return true
+        return true //wenn das Element ein u(i) enthält und danach ein n (i+1) und dann ein d(i+2) dann soll er true zurückgeben
       }
       }
-    return false
+    return false //wenn nicht dann false
    }
 
 export function aufgabe09 (args) {
