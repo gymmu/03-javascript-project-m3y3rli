@@ -249,6 +249,16 @@ if (input.length > 1) {
   }
   }
 
+  export function aufgabe15 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    }
+    return result.join("")
+  }
+
   export function aufgabe18 (args) {
     const input = args
     const inputName = []
