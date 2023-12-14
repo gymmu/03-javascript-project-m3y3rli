@@ -129,6 +129,18 @@ export function aufgabe05 (args) {
     return false //alle Test nicht erfüllt, d. h. es ist leer also kein TExt
    }
 
+   export function aufgabe07 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement === "u" && input[i+1] === "n" && input[i+2] === "d") {
+        return true
+      }
+      }
+    return result.join("")
+   }
+
 export function aufgabe09 (args) {
   const input = args
 
