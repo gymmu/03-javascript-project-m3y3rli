@@ -329,7 +329,7 @@ if (input.length > 1) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if(currentElement == "." && input[i+1] !== " ") return false}
+    if(currentElement == "." && input[i+1] !== " ") return false} //wenn ein Punkt vorkommt und danach KEIn Leerschlag kommt dann false
   return result.join("")
  }
  
