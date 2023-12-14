@@ -253,6 +253,7 @@ if (input.length > 1) {
     const input = args
     const result = []
     if (input.lastIndexOf(" ") == input.length -1) {
+       //wenn das letzte Element der Eingabe ein Leerzeichen ist
       for (let i = 0; i < input.length; i++) {
         const currentElement = input[i]
         result.push(currentElement)
@@ -262,7 +263,7 @@ if (input.length > 1) {
       const currentElement = input[i]
       if (currentElement !== " " ) {
         result.push(currentElement)
-       
+        //wenn das aktuelle Element kein Leerzeichen ist, soll es angehägt werden an die Liste
       } else {
         return result.join("")
       }
