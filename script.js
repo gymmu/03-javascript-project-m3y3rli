@@ -96,6 +96,17 @@ export function aufgabe05 (args) {
   }
   return false //wenn das Eingegebene diese Funktion nicht erfüllt, dann soll er false zurückgeben
   }
+
+  export function aufgabe07 (args) {
+    const input = args
+    const result = []
+    
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    }
+    return result.join("")
+  }
  
 
 export function aufgabe09 (args) {
@@ -192,6 +203,25 @@ if (input.length > 1) {
   }
   }
 
+  export function aufgabe17 (args) {
+ 
+    const text = args
+    const phrases = []
+    let currentPhrase = []
+    for (let i = 0; i < text.length; i++) {
+      const currentElement = text[i]
+      if (currentElement === ",") {
+        phrases.push(currentPhrase.join(""))
+        currentPhrase = [] 
+      } else {
+        currentPhrase.push(currentElement)
+      }
+    }
+    phrases.push(currentPhrase.join(""))
+    return phrases
+    }
+
+
   export function aufgabe21 (args) {
     const input = args
     const result = []
@@ -219,4 +249,4 @@ if (input.length > 1) {
     result.push(firstElement)
 
     return result.join("")
-  }
+  }3
