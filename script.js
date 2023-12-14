@@ -109,6 +109,15 @@ export function aufgabe05 (args) {
   return false //wenn das Eingegebene diese Funktion nicht erfüllt, dann soll er false zurückgeben
   }
  
+  export function aufgabe06 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    }
+    return result.join("")
+  }
 
 export function aufgabe09 (args) {
   const input = args
