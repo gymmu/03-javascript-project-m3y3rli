@@ -63,7 +63,7 @@ export function aufgabe04 (args) {
     const currentElement = input[i]
     
 if ("+,-.#%&/()=?£}{$¦@¬|¢´!<>°§;':_~^*][¨".indexOf(currentElement) >= 0) {
-//sortiert alle angegebenen Sonderzeichen aus aus
+//sortiert alle angegebenen Sonderzeichen aus aus, aber nicht möglich alle aussortieren, denn Gänsefüsschen geht nicht
 }  else{
   result.push(currentElement)
 }
