@@ -138,7 +138,7 @@ export function aufgabe05 (args) {
         return true
       }
       }
-    return result.join("")
+    return false
    }
 
 export function aufgabe09 (args) {
