@@ -342,6 +342,16 @@ if (input.length > 1) {
   if (inputName.join("") == "" && inputAge.join("") == "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
  } // Überprüft die Werte der inputName und inputAge Arrays und gibt entsprechende Sätze zurück
   
+export function aufgabe19 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  
+  }
+  return result.join("")
+}
+
  export function aufgabe20 (args) {
   const input = args
   const result = []
