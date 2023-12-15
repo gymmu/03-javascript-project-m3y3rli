@@ -256,9 +256,9 @@ if (input.length > 1) {
     let currentPhrase = []
     for (let i = 0; i < text.length; i++) {
       const currentElement = text[i]
-      if (currentElement === ",") {
+      if (currentElement === ",") { //wenn das aktuelle Element ein Komma ist
         phrases.push(currentPhrase.join(""))
-        currentPhrase = [] 
+        currentPhrase = [] //leere die Variable
       } else {
         currentPhrase.push(currentElement)
       }
@@ -328,7 +328,7 @@ if (input.length > 1) {
         //beides erfüllt, dann geht es weiter zum Alter
       } else {
         if (readText === true) {
-          inputName.push(currentElement)
+          inputName.push(currentElement)//wenn es der Name liest, wird es zum Element inputName hinzu
         }
         else if (readText === false) {
           inputAge.push(currentElement)
