@@ -384,13 +384,17 @@ if (input.length > 1) {
 
   export function aufgabe27 (args) {
     const input = args
-    const result = []
+
+    // Wenn länge gleich 0, dann false
+    if (input.length === 0) return false
+
     for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-      
+      const currentElement = input[i].charCodeAt(0) 
+      if (input.length == 0) return false//wenn länge gleich 0, dann false
+      if (47 >= currentElement || currentElement >= 58) return false //wenn currentElement nicht zwischen 0 und 9 ist, dann false
     }
-    return result.join("")
-  }
+   return true
+   }
 
   export function bubbleSort (args) {
   const text = args
