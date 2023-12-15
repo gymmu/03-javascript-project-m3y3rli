@@ -55,29 +55,41 @@ export function aufgabe03 (args) {
 export function aufgabe04 (args) {
   const input = args
   const result = []
-  print(input)
-
-  let count = 0
-
-  for (let i = 0; i < input.length; i++) {
+  const cleanText = [] //lösch alle Sonderzeichen ausser Leerzeichen
+    for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    
-if ("+,-.#%&/()=?£}{$¦@¬|¢´!<>°§;':_~^*][¨".indexOf(currentElement) >= 0) {
-//sortiert alle angegebenen Sonderzeichen aus aus
-}  else{
-  result.push(currentElement)
-}
-}
-
-const clearedString = result.join("")
-//sagt, dass die Buchstabenelemente zusammengehören
-const tmp = clearedString.split(" ")
-//sagt, dass die clearedString (gesäuberte Liste)mdurch Leerzeichen getrennt werden soll
-print(tmp)
-
-return tmp.length
-}
-
+    const ascii = currentElement.charCodeAt(0) //wenn kein Sonderzeichen, dann soll er angehängt werden
+    if (32 === ascii) {
+      cleanText.push(currentElement)
+    } else if (65 <= ascii && ascii <= 90) { 
+      cleanText.push(currentElement) //sind alle Grossbuchstaben
+      cleanText.push(currentElement) 
+    } else if (97 <= ascii && ascii <= 122) {
+      cleanText.push(currentElement)//sind alle Kleinbuchstaben
+    } 
+  } 
+  const tmp = cleanText.join("")
+  const tmpText = []
+  for (let i = 0; i < tmp.length; i++) {
+    const currentElement = tmp[i]
+    const nextElement = tmp[i + 1]
+    if (currentElement === " " && nextElement === " "){ //ignoriert mehrere Leerzeichen hintereinander  
+    } else {
+      tmpText.push(currentElement)
+    }
+  }
+ 
+ const clean = tmpText.join("")
+ 
+  let words = 0
+  for (let i = 0; i < clean.length; i++) {
+    const currentElement = clean[i]
+    if (currentElement === " ") {
+      words++
+    }
+  }
+  return words + 1
+ }
 
 export function aufgabe05 (args) {
   const input = args
@@ -108,6 +120,51 @@ export function aufgabe05 (args) {
     return result.join("")
   }
  
+  export function aufgabe06 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt(0)
+      if (ascii >= 48 && ascii <= 57) {
+      } else if (ascii >= 65 && ascii <= 90) {
+        //überprüft ob es ein Grossbuchstabe ist
+      } else if (ascii >= 97 && ascii <= 122) {
+        //überprüft ob es ein Kleinbuchstabe ist
+      } else if (ascii === 32) {
+        //überprüft ob es ein Leerzeichen ist
+      } else {
+        return true //wenn es ein Sonderzeichen ist also kein der obrigen Test erfüllt, dann soll er true zurückgeben
+      }
+    }
+    return false //alle Test nicht erfüllt, d. h. es ist leer also kein TExt
+   }
+
+   export function aufgabe07 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement === "u" && input[i+1] === "n" && input[i+2] === "d") {
+        return true //wenn das Element ein u(i) enthält und danach ein n (i+1) und dann ein d(i+2) dann soll er true zurückgeben
+      }
+      }
+    return false //wenn nicht dann false
+   }
+
+   export function aufgabe08(args) {
+    const input = args        
+    const result = []                    
+    for (let i = 0; i < input.length; i++) {      
+      const currentElement = input[i]        
+      if (currentElement === "e") {  
+        result.push(3) //wenn ein kleines e vorkommt soll es mit 3 ersetzt werden                                                     
+      } else {                                                
+        result.push(currentElement)  //sonst einfach das currentElement zurückgeben         
+      }
+    }
+    return result.join("")                                        
+   }
 
 export function aufgabe09 (args) {
   const input = args
@@ -221,6 +278,91 @@ if (input.length > 1) {
     return phrases
     }
 
+  export function aufgabe15 (args) {
+    const input = args
+    const result = []
+    if (input.lastIndexOf(" ") == input.length -1) {
+       //wenn das letzte Element der Eingabe ein Leerzeichen ist
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input[i]
+        result.push(currentElement)
+    }
+  } else {
+  for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement !== " " ) {
+        result.push(currentElement)
+        //wenn das aktuelle Element kein Leerzeichen ist, soll es angehägt werden an die Liste
+      } else {
+        return result.join("")
+      }
+    }
+    return result.join("")
+  }
+ }
+
+ export function aufgabe16(args) {
+  const input = args
+  const result1 = [] // Leerer Array für die erste Ergebnisgruppe
+  const result2 = [] // Leerer Array für die zweite Ergebnisgruppe
+  let readText = true // Boolean-Variable, die angibt, ob Text gelesen werden soll
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$" && readText !== false) {
+      readText = false // Wenn das aktuelle Element "$" ist und readText nicht false ist, wird readText auf false gesetzt
+    } else {
+      if (readText === true) {
+        result1.push(currentElement) // Wenn readText true ist, wird das aktuelle Element zur ersten Ergebnisgruppe hinzugefügt
+      } else if (readText === false) {
+        result2.push(currentElement) // Wenn readText false ist, wird das aktuelle Element zur zweiten Ergebnisgruppe hinzugefügt
+      }
+    }
+  }
+  if (result2.join("") !== "") {
+    return result1.join("") + "," + result2.join("") // Wenn die zweite Ergebnisgruppe nicht leer ist, werden die Elemente der ersten und zweiten Ergebnisgruppe mit einem Komma verbunden und zurückgegeben
+  } else {
+    return result1.join("") // Wenn die zweite Ergebnisgruppe leer ist, werden nur die Elemente der ersten Ergebnisgruppe zurückgegeben
+  }
+ }
+
+  export function aufgabe18 (args) {
+    const input = args
+    const inputName = []
+    const inputAge = []
+    let readText = true
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+       if (currentElement === " " && readText !== false) {
+        //testes ob Leerzeichen vorhanden sind und wir noch Text lesen können
+        readText = false
+        //beides erfüllt, dann geht es weiter zum Alter
+      } else {
+        if (readText === true) {
+          inputName.push(currentElement)
+        }
+        else if (readText === false) {
+          inputAge.push(currentElement)
+          //wenn es das Alter liest dann fügen wir es zum Element inputAge hinzu
+        }
+    }
+  }
+  if (inputName.join("") !== "" && inputAge.join("") !== "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") !== "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + " Jahre alt"
+  if (inputName.join("") !== "" && inputAge.join("") == "") return "Sie heissen " + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
+  if (inputName.join("") == "" && inputAge.join("") == "") return "Sie heissen" + inputName.join("") + " und sind " + inputAge.join("") + "Jahre alt"
+ } // Überprüft die Werte der inputName und inputAge Arrays und gibt entsprechende Sätze zurück
+  
+ export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if(currentElement == "." && input[i+1] !== " ") return false    //wenn ein Punkt vorkommt und danach KEIN Leerschlag kommt dann false 
+    else if(currentElement == "." && input[i+1] == " ") return true //wenn ein Punkt vorkommt und danach EIN Leerschlag kommt dann true
+  }
+  return result.join("")
+ }
 
   export function aufgabe21 (args) {
     const input = args
