@@ -382,6 +382,16 @@ if (input.length > 1) {
     return result.join("")
   }
 
+  export function aufgabe27 (args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+    }
+    return result.join("")
+  }
+
   export function bubbleSort (args) {
   const text = args
   const list = text.split("") // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
